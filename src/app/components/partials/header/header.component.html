@@ -1,0 +1,23 @@
+<div class="bg-slate-800 border-b-2 border-white shadow-sm sticky top-0 z-50  text-white p-4">
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between">
+            <div class="text-xl font-bold">Shoestop</div>
+            <div class="space-x-4 invisible md:visible">
+                <a routerLink="home" class="hover:text-gray-300">Home</a>
+                <a routerLink="men" class="hover:text-gray-300">Men</a>
+                <a routerLink="women" class="hover:text-gray-300">women</a>
+                <a routerLink="kids" class="hover:text-gray-300">kids</a>
+            </div>
+
+            <div class="space-x-4" (click)="toggleMenu()">
+                menu
+            </div>
+            <div class="w-40 h-40 bg-white flex flex-col items-center justify-center text-black shadow-md absolute top-16 right-0 " *ngIf="isMenuVisible">
+                <a routerLink="home" class="hover:text-red-500">Home</a>
+                <a routerLink="men" class="hover:text-red-500">Men</a>
+                <a routerLink="women" class="hover:text-red-500">women</a>
+                <a routerLink="kids" class="hover:text-red-500">kids</a>
+            </div>
+        </nav>
+    </div>
+</div>
